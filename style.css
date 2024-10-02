@@ -1,4 +1,16 @@
-body {
-    background-color: black;
-    color: white; /* Optional: Change text color to white for better visibility */
+html, body {
+    height: 100%; /* Ensure full height for body */
+    margin: 0; /* Remove default margin */
+    background-color: #000000; /* Set background color to pitch black */
+    color: #FFFFFF; /* Change text color to white for visibility */
+}
+
+/* Set all elements to pitch black background */
+header, footer, main, section, div, article {
+    background-color: #000000; /* Set background of other elements to pitch black */
+    color: #FFFFFF; /* Ensure text remains visible */
+}
+
+a {
+    color: #00BFFF; /* Optional: Change link color for better visibility (bright blue) */
 }
