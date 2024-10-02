@@ -2,15 +2,19 @@ html, body {
     height: 100%; /* Ensure full height for body */
     margin: 0; /* Remove default margin */
     background-color: #000000; /* Set background color to pitch black */
-    color: #FFFFFF; /* Change text color to white for visibility */
 }
 
-/* Set all elements to pitch black background */
-header, footer, main, section, div, article {
-    background-color: #000000; /* Set background of other elements to pitch black */
-    color: #FFFFFF; /* Ensure text remains visible */
+.centered-text {
+    color: #FFFFFF; /* Set text color to white */
+    font-size: 48px; /* Adjust font size as needed */
+    text-align: center; /* Center the text */
+    position: absolute; /* Position absolutely for centering */
+    top: 50%; /* Position from top */
+    left: 50%; /* Position from left */
+    transform: translate(-50%, -50%); /* Center the text */
 }
 
-a {
-    color: #00BFFF; /* Optional: Change link color for better visibility (bright blue) */
+.widgetbot {
+    border-radius: 0; /* Remove rounded corners if needed */
+    box-shadow: none; /* Remove shadow if it's present */
 }
