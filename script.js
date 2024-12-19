@@ -1,32 +1,28 @@
-// Open photo in modal with fade-in effect
-function openPhoto(src) {
-  const modal = document.getElementById("photo-modal");
-  const modalImg = document.getElementById("modal-img");
+function startAnimation() {
+  const overlay = document.getElementById("fullscreen-overlay");
   const fadeText = document.getElementById("fade-text");
 
-  // Set the image source
-  modalImg.src = src;
-
-  // Show modal and start animation
-  modal.style.display = "flex";
-
   // Reset animations
-  modalImg.style.animation = "none";
+  overlay.style.animation = "none";
   fadeText.style.animation = "none";
-  void modalImg.offsetWidth; // Trigger reflow
+  void overlay.offsetWidth; // Trigger reflow
   void fadeText.offsetWidth;
 
-  // Apply animations
-  modalImg.style.animation = "fadeIn 5s forwards";
-  fadeText.style.animation = "showText 1s forwards";
+  // Display overlay and text
+  overlay.style.display = "flex";
 
-  // Hide fade text after 1 second
+  // Fade in for 5 seconds
+  overlay.style.animation = "fadeIn 5s forwards";
+  fadeText.style.animation = "fadeIn 5s forwards";
+
+  // Start fade-out after 5 seconds
   setTimeout(() => {
-    fadeText.style.display = "none";
-  }, 1000);
-}
+    overlay.style.animation = "fadeOut 3s forwards";
+    fadeText.style.animation = "fadeOut 3s forwards";
+  }, 5000);
 
-// Close modal on clicking anywhere outside the image
-document.getElementById("photo-modal").onclick = function () {
-  this.style.display = "none";
-};
+  // Hide overlay completely after fade-out (8 seconds total)
+  setTimeout(() => {
+    overlay.style.display = "none";
+  }, 8000);
+}
