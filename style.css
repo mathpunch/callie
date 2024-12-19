@@ -1,47 +1,55 @@
 /* General Styles */
 body {
   font-family: 'Lora', serif;
-  line-height: 1.8;
   margin: 0;
   padding: 0;
   background-color: #fff5f5;
   color: #4a2b2b;
 }
 
-/* Photo Modal */
-.modal {
-  display: none;
+/* Photo Frame */
+.gallery {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.photo-frame img {
+  max-width: 250px;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.photo-frame img:hover {
+  transform: scale(1.1);
+}
+
+/* Full-Screen Overlay */
+#fullscreen-overlay {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: black;
+  display: none; /* Initially hidden */
   align-items: center;
   justify-content: center;
-}
-
-.modal img {
-  width: 60%;
-  height: auto;
+  z-index: 1000;
   opacity: 0;
-  animation: fadeIn 5s forwards;
+  animation: none;
 }
 
-/* Fade Text */
 #fade-text {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   color: white;
-  font-size: 3rem;
+  font-size: 4rem;
   font-family: 'Roboto', sans-serif;
   opacity: 0;
-  animation: showText 1s forwards;
+  animation: none;
 }
 
-/* Animations */
+/* Fade-In and Fade-Out Animations */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -51,11 +59,11 @@ body {
   }
 }
 
-@keyframes showText {
+@keyframes fadeOut {
   from {
-    opacity: 0;
+    opacity: 1;
   }
   to {
-    opacity: 1;
+    opacity: 0;
   }
 }
