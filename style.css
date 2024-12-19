@@ -1,11 +1,12 @@
 /* General Styles */
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Lora', serif;
   line-height: 1.8;
   margin: 0;
   padding: 0;
   background-color: #fff5f5; /* Light blush background */
   color: #4a2b2b; /* Warm brown for text */
+  overflow-x: hidden;
 }
 
 /* Header */
@@ -13,18 +14,21 @@ header {
   background-color: #ff7f7f; /* Warm coral */
   color: white;
   text-align: center;
-  padding: 2.5rem 1rem;
+  padding: 3rem 1rem;
   border-bottom: 6px solid #d95a5a;
 }
 
 header h1 {
   font-size: 3.5rem;
-  font-weight: bold;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
   margin: 0;
 }
 
 header p {
   font-size: 1.3rem;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
   margin-top: 0.5rem;
   font-style: italic;
 }
@@ -32,10 +36,10 @@ header p {
 /* Hero Section */
 #hero {
   text-align: center;
-  padding: 2rem;
+  padding: 2rem 1rem;
+  margin: 2rem auto;
   background-color: #fff0f6; /* Light pink highlight */
   border: 2px solid #ffccd5;
-  margin: 1.5rem auto;
   border-radius: 15px;
   max-width: 900px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -45,18 +49,41 @@ header p {
   font-size: 2rem;
   font-style: italic;
   color: #7a3a3a;
+  margin-bottom: 1rem;
 }
 
 #hero p {
   font-size: 1.2rem;
 }
 
-/* About Section */
-#about {
-  text-align: center;
-  padding: 1.5rem;
-  margin: 1.5rem auto;
-  max-width: 800px;
+/* Section Animations */
+.animate-fade-in {
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+.animate-slide-up {
+  animation: slideUp 1.5s ease-in-out;
+}
+
+/* Keyframes for Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* Gallery Section */
@@ -65,7 +92,7 @@ header p {
   gap: 20px;
   justify-content: center;
   flex-wrap: wrap;
-  padding: 1rem;
+  padding: 2rem;
 }
 
 .photo-frame {
@@ -80,7 +107,8 @@ header p {
 .photo-frame img {
   max-width: 250px;
   height: auto;
-  border-bottom: 4px solid #ffcccc;
+  display: block;
+  margin: 0 auto;
 }
 
 .photo-frame:hover {
@@ -90,46 +118,9 @@ header p {
 
 .caption {
   margin: 0.5rem 0;
-  font-size: 0.9rem;
-  color: #5a2a2a;
-}
-
-/* Memories Section */
-#memories {
-  background-color: #ffe6f0; /* Soft pink */
-  border: 2px solid #ffccd5;
-  padding: 2rem;
-  margin: 2rem auto;
-  border-radius: 15px;
-  max-width: 800px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  text-align: center;
-}
-
-#memories h2 {
-  color: #d95a5a; /* Deep red */
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-}
-
-#memories blockquote {
+  font-size: 1rem;
   font-style: italic;
-  color: #7a3a3a;
-  margin: 1rem 0;
-  font-size: 1.4rem;
-}
-
-#memories ul {
-  text-align: left;
-  margin: 1rem auto;
-  padding-left: 20px;
-  max-width: 600px;
-}
-
-#memories li {
-  margin-bottom: 0.5rem;
   color: #5a2a2a;
-  font-style: italic;
 }
 
 /* Footer */
@@ -138,4 +129,5 @@ footer {
   background-color: #d95a5a;
   color: white;
   padding: 1rem;
+  margin-top: 2rem;
 }
