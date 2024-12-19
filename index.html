@@ -13,33 +13,26 @@
     <p>A Tribute to the Love and Joy Callie Brought into My Life</p>
   </header>
   <main>
-    <!-- Hero Section -->
-    <section id="hero" class="animate-fade-in">
-      <h2>"A cat's love whispers softly but echoes forever."</h2>
-      <p>Welcome to Callie's Corner, a space to cherish the beautiful memories of Callie, the cat who filled my life with endless love and happiness.</p>
-    </section>
-
     <!-- Photo Gallery -->
-    <section id="gallery" class="animate-fade-in">
+    <section id="gallery">
       <h2>Callie's Photo Gallery</h2>
       <div class="gallery">
-        <div class="photo-frame" onclick="openPhoto('bestphoto.JPG')">
+        <div class="photo-frame" onclick="startAnimation()">
           <img src="bestphoto.JPG" alt="Callie's Best Photo">
         </div>
-        <div class="photo-frame" onclick="openPhoto('nicephoto.JPG')">
+        <div class="photo-frame" onclick="startAnimation()">
           <img src="nicephoto.JPG" alt="Callie Looking Nice">
         </div>
-        <div class="photo-frame" onclick="openPhoto('photo.JPG')">
+        <div class="photo-frame" onclick="startAnimation()">
           <img src="photo.JPG" alt="Another Cute Photo of Callie">
         </div>
       </div>
     </section>
   </main>
 
-  <!-- Pop-Up Modal -->
-  <div id="photo-modal" class="modal">
+  <!-- Full-Screen Animation -->
+  <div id="fullscreen-overlay">
     <div id="fade-text">💖❤️❤️💖</div>
-    <img id="modal-img" src="" alt="Enlarged Photo">
   </div>
 
   <footer>
