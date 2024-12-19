@@ -19,58 +19,33 @@
       <p>Welcome to Callie's Corner, a space to cherish the beautiful memories of Callie, the cat who filled my life with endless love and happiness.</p>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="animate-slide-up">
-      <h2>About Callie</h2>
-      <p>
-        Callie was more than a pet—she was family. Her playful pounces, gentle purrs, and comforting cuddles brought warmth to my soul. 
-        She taught me the true meaning of unconditional love, and I’ll forever be grateful for every moment I spent with her. ❤️
-      </p>
-    </section>
-
     <!-- Photo Gallery -->
     <section id="gallery" class="animate-fade-in">
       <h2>Callie's Photo Gallery</h2>
-      <p>A glimpse into Callie's life through her most cherished moments:</p>
       <div class="gallery">
-        <div class="photo-frame">
+        <div class="photo-frame" onclick="openPhoto('bestphoto.JPG')">
           <img src="bestphoto.JPG" alt="Callie's Best Photo">
-          <p class="caption">Her best photo</p>
         </div>
-        <div class="photo-frame">
+        <div class="photo-frame" onclick="openPhoto('nicephoto.JPG')">
           <img src="nicephoto.JPG" alt="Callie Looking Nice">
-          <p class="caption">Callie inside a box looking out</p>
         </div>
-        <div class="photo-frame">
+        <div class="photo-frame" onclick="openPhoto('photo.JPG')">
           <img src="photo.JPG" alt="Another Cute Photo of Callie">
-          <p class="caption">Callie's youngest photo</p>
         </div>
       </div>
     </section>
-
-    <!-- Memories Section -->
-    <section id="memories" class="animate-slide-up">
-      <h2>Memories of Callie</h2>
-      <blockquote>
-        "Some angels choose fur instead of wings."
-      </blockquote>
-      <p>
-        Callie brought endless joy to my days. Here are some of my favorite memories:
-      </p>
-      <ul>
-        <li>Her comforting purrs that always seemed to come at the perfect moment.</li>
-        <li>Her curious little head tilts whenever she heard a new sound.</li>
-        <li>The way she would claim the sunniest spot in the house as her throne.</li>
-      </ul>
-      <p>
-        She may not be with me now, but her spirit lives on in every smile, every warm memory, and every heartbeat. ❤️
-      </p>
-    </section>
   </main>
 
-  <!-- Footer -->
+  <!-- Pop-Up Modal -->
+  <div id="photo-modal" class="modal">
+    <div id="fade-text">💖❤️❤️💖</div>
+    <img id="modal-img" src="" alt="Enlarged Photo">
+  </div>
+
   <footer>
     <p>Made with ❤️ and devotion for Callie. 🐾</p>
   </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
